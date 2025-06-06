@@ -7,15 +7,27 @@ from typing import Any
 from homeassistant.components.notify import (
     ATTR_TARGET,
     BaseNotificationService,
+    NotifyEntity,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 
 from .const import DOMAIN
 from .coordinator import MapShareCoordinator
 
 _LOGGER = logging.getLogger(__name__)
+
+
+async def async_setup_entry(
+    hass: HomeAssistant,
+    config_entry: ConfigEntry,
+    async_add_entities: AddEntitiesCallback,
+) -> None:
+    """Set up the Garmin MapShare notify platform."""
+    # This is required for platforms to be loaded via config entries
+    pass
 
 
 async def async_get_service(
