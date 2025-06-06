@@ -18,5 +18,25 @@
                 }
             }
         }
+    },
+    "services": {
+        "notify": {
+            "name": "Send message to InReach",
+            "description": "Send a message to InReach devices via MapShare",
+            "fields": {
+                "message": {
+                    "name": "Message",
+                    "description": "The message to send to the InReach device"
+                },
+                "target": {
+                    "name": "Target",
+                    "description": "Device name, display name, or IMEI to send the message to. If not specified, sends to all devices."
+                },
+                "from_addr": {
+                    "name": "From Address",
+                    "description": "The sender address that will appear on the InReach device"
+                }
+            }
+        }
     }
 }

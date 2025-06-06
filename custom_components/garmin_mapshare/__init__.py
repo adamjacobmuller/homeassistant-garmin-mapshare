@@ -16,6 +16,7 @@ PLATFORMS: list[Platform] = [
     Platform.DEVICE_TRACKER,
     Platform.SENSOR,
     Platform.BINARY_SENSOR,
+    Platform.NOTIFY,
 ]
 
 
